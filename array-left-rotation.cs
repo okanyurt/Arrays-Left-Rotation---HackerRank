@@ -26,7 +26,20 @@ class Result
 
     public static List<int> rotLeft(List<int> a, int d)
     {
+        int arr_lenght = a.Count();
+        int leftrotation = d % arr_lenght;
+        List<int> Result_a = new List<int>(arr_lenght);
 
+
+        for (int i = d; i < arr_lenght; i++)
+        {
+            Result_a.Add(a[i]);
+        }
+        for (int j = 0; j < d; j++)
+        {
+            Result_a.Add(a[j]);
+        }
+        return Result_a;
     }
 
 }
